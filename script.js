@@ -4,19 +4,27 @@
 const container = document.createElement('div');
 container.setAttribute('id', 'container');
 
+const h1 = document.createElement('h1');
+h1.textContent = 'Etch-a-Sketch';
+document.body.appendChild(h1);
+
+const buttons = document.createElement('div');
+buttons.setAttribute('id', 'buttons');
+container.appendChild(buttons);
+
 const newBtn = document.createElement('button');
 newBtn.setAttribute('id', 'new');
 newBtn.classList.add('btn');
-newBtn.textContent = 'New Grid'
-container.appendChild(newBtn);
+newBtn.textContent = 'New'
+buttons.appendChild(newBtn);
 
 const clearBtn = document.createElement('button');
 clearBtn.setAttribute('id', 'clear');
 clearBtn.classList.add('btn')
-clearBtn.textContent = 'Clear Board';
-container.appendChild(clearBtn);
+clearBtn.textContent = 'Clear';
+buttons.appendChild(clearBtn);
 
-const boardSize = 640;
+const boardSize = 480;
 
 // Generate Content
 document.body.appendChild(container);
